@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<filter-class>zbf.bookstore.web.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>AdminFilter</filter-name>
+  	<filter-class>zbf.bookstore.web.filter.AdminFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>AdminFilter</filter-name>
+  	<url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>ImageCode</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.ImageCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ActiveServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.ActiveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyAccountServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.MyAccountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookListServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.BookListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindBookById</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.FindBookById</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteBookById</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.DeleteBookById</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteSelectedBooks</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.DeleteSelectedBooks</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindProductByManyCondition</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.FindProductByManyCondition</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.PageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyUserInfoServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.ModifyUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.userServlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCartServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.AddCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindBookInfoServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.bookServlet.FindBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.ChangeNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.CreateOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SetCountServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.SetCountServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.OrderListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderItemInfo</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.OrderItemInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderPaymentServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.OrderPaymentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayServlet</servlet-name>
+    <servlet-class>zbf.bookstore.web.orderServlet.PayServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ImageCode</servlet-name>
+    <url-pattern>/servlet/imageCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/servlet/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActiveServlet</servlet-name>
+    <url-pattern>/servlet/activeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyAccountServlet</servlet-name>
+    <url-pattern>/servlet/myAccountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/servlet/addBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookListServlet</servlet-name>
+    <url-pattern>/servlet/bookListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookById</servlet-name>
+    <url-pattern>/servlet/findBookById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBookById</servlet-name>
+    <url-pattern>/servlet/deleteBookById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteSelectedBooks</servlet-name>
+    <url-pattern>/servlet/deleteSelectedBooks</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindProductByManyCondition</servlet-name>
+    <url-pattern>/servlet/findProductByManyCondition</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/servlet/pageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyUserInfoServlet</servlet-name>
+    <url-pattern>/servlet/modifyUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/logoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCartServlet</servlet-name>
+    <url-pattern>/servlet/addCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookInfoServlet</servlet-name>
+    <url-pattern>/servlet/findBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <url-pattern>/servlet/changeNumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/servlet/createOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetCountServlet</servlet-name>
+    <url-pattern>/servlet/setCountServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServlet</servlet-name>
+    <url-pattern>/servlet/orderListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderItemInfo</servlet-name>
+    <url-pattern>/servlet/orderItemInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderPaymentServlet</servlet-name>
+    <url-pattern>/servlet/orderPaymentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayServlet</servlet-name>
+    <url-pattern>/servlet/payServlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
